@@ -870,7 +870,8 @@ class Server(object):
         request.callback_uri = oauth_params.get('oauth_callback')
         request.verifier = oauth_params.get('oauth_verifier')
         request.signature_method = oauth_params.get('oauth_signature_method')
-        request.realm = dict(params).get('realm')
+        #request.realm = dict(params).get('realm')
+        request.realm = required_realm
 
         # The server SHOULD return a 400 (Bad Request) status code when
         # receiving a request with missing parameters.
